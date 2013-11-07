@@ -13,6 +13,7 @@ module.exports = function(grunt) {
       tsd: {
         cmd: function() {
           var dependencies = [
+            'jquery'
           ];
           return 'tsd install ' + dependencies.join(' ');
         }
@@ -93,7 +94,7 @@ module.exports = function(grunt) {
   });
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.registerTask('default', [
-    'debug-build',
+    'release-build',
     'connect',
     'watch'
   ]);

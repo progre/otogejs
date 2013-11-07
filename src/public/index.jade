@@ -2,8 +2,11 @@ doctype 5
 meta(charset='utf-8')
 title
 link(rel='stylesheet', href='/css/style.css')
+script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.js')
+script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular-route.js')
 if debug
   script(src='//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.8/require.min.js', data-main='/js/config')
   script(src='//localhost:35729/livereload.js')
 else
   script(src='//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.8/require.min.js', data-main='/js/main.min.js')
+body(ng-view)
