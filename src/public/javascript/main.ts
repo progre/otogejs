@@ -1,6 +1,6 @@
 /// <reference path="../../DefinitelyTyped/angular-1.0.d.ts"/>
 
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'ngAnimate']);
 app.config(['$routeProvider',
     ($routeProvider: ng.IRouteProvider) => {
         $routeProvider
