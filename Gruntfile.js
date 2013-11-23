@@ -1,21 +1,23 @@
 module.exports = function(grunt) {
+  var projectConfig = {
+    tsdDependencies: [
+    ]
+  };
+
   var jadeFiles = grunt.file.expandMapping(
     ['src/public/**/*.jade'], 'public/', {
       rename: function(destBase, destPath) {
         return destBase + destPath.replace(/^src\/public\//, '').replace(/\.jade$/, ".html");
       }
     }
-  )
-
+  );
+  projectConfig.tsdDependencies.push('jquery');
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     exec: {
       tsd: {
         cmd: function() {
-          var dependencies = [
-            'jquery'
-          ];
-          return 'tsd install ' + dependencies.join(' ');
+          return 'tsd install ' + tsdDependencies.join(' ');
         }
       }
     },
