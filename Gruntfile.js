@@ -7,7 +7,6 @@ module.exports = function(grunt) {
       }
     }
   );
-  projectConfig.tsdDependencies.push('jquery');
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     exec: {
