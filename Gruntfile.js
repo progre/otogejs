@@ -50,6 +50,7 @@ module.exports = function(grunt) {
         src: ['src/public/**/*.ts'],
         dest: './',
         options: {
+          noImplicitAny: true,
           module: 'amd',
           base_path: 'src',
           sourcemap: true

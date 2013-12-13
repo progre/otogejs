@@ -1,8 +1,9 @@
-/// <reference path="../../DefinitelyTyped/angular-1.0.d.ts"/>
+/// <reference path="../../typings/angularjs/angular.d.ts"/>
+/// <reference path="../../typings/angularjs/angular-route.d.ts"/>
 
 var app = angular.module('app', ['ngRoute', 'ngAnimate']);
 app.config(['$routeProvider',
-    ($routeProvider: ng.IRouteProvider) => {
+    ($routeProvider: ng.route.IRouteProvider) => {
         $routeProvider
             .when('/', {
                 templateUrl: 'html/index.html', controller: 'IndexController'
