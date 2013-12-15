@@ -3,9 +3,9 @@ meta(charset='utf-8')
 title
 link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
 link(rel='stylesheet', href='css/style.css')
-div(ng-view)
-  div(style='text-align: center; margin: 40px auto; font-size: 24px')
-    | ⏳
+body(ng-view)
+  .wrapper
+    .inner(style='font-size: 24px') ⏳
 script(src='//code.jquery.com/jquery-2.0.3.min.js')
 script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.js')
 script(src='//code.createjs.com/createjs-2013.09.25.min.js')
